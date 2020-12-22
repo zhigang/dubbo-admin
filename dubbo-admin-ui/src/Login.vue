@@ -35,13 +35,12 @@
                   <v-text-field
                     name="input-10-2"
                     :label="$t('password')"
-                    hint="At least 8 characters"
-                    min="8"
                     :append-icon="e2 ? 'visibility' : 'visibility_off'"
                     :append-icon-cb="() => (e2 = !e2)"
                     v-model="password"
                     class="input-group--focused"
                     :type="e2 ? 'password' : 'text'"
+                    @keyup.enter.native="login"
                   ></v-text-field>
 
                   <v-card-actions>
